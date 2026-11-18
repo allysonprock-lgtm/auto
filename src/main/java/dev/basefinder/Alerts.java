@@ -54,9 +54,9 @@ final class Alerts {
                 Component bar = Component.literal((test ? "Test alert" : "Base found") + ": chunk "
                         + d.chunkX + ", " + d.chunkZ).withStyle(ChatFormatting.GOLD);
 
-                mc.player.displayClientMessage(head, false);
-                mc.player.displayClientMessage(detail, false);
-                mc.player.displayClientMessage(bar, true); // action bar
+                mc.player.sendSystemMessage(head);
+                mc.player.sendSystemMessage(detail);
+                mc.player.sendOverlayMessage(bar); // action bar
             }
             if (cfg.alertSound) SoundPlayer.play(mc, cfg);
         }
