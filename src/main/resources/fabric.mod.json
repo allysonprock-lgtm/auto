@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "basefinder",
+  "version": "${version}",
+  "name": "Base Finder",
+  "description": "Client-side detector that finds clusters of storage blocks (likely player bases), records only the chunk coordinates, sends them to a Discord webhook and alerts you in game.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.basefinder.BaseFinderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": ">=26.1 <26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
